@@ -40,26 +40,15 @@ public class DaoConfiguration{
         return catDaoJdbc;
     }
 
-    //H2
-//    @Bean
-//    public DataSource dataSource(){
-//        DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-//        driverManagerDataSource.setDriverClassName("org.h2.Driver");
-//        driverManagerDataSource.setUrl("jdbc:h2:tcp://localhost/~/test");
-//        driverManagerDataSource.setUsername("sa");
-//        driverManagerDataSource.setPassword("");
-//        return driverManagerDataSource;
-//    }
-//
     //Mysql
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-        String name = "root";
-        String pwd = ".ckw5819wkc";
+        String name = "******";
+        String pwd = "******";
         String driverClassName = "com.mysql.cj.jdbc.Driver";
         driverManagerDataSource.setDriverClassName(driverClassName);
-        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/catfound?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT");
+        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/******?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT");
         driverManagerDataSource.setUsername(name);
         driverManagerDataSource.setPassword(pwd);
         return driverManagerDataSource;
